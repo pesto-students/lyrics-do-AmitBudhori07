@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.search_img{
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+.info{
+    height: auto;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+img{
+    height:100%;
+    width: 100%;
+}
+
+input[type=text]{
+    height: 12%;
+    width: 30%;
+    position: absolute;
+    top: 55%;
+    left:35%;
+    padding: 0 10px 0 29px;
+    outline: none;
+    border: 0ch !important;
+    border-radius: 7px 7px 7px !important;
+    font-weight:bold;
+}
+
+#search-btn{
+    position: absolute;
+    background-color: #6A15D5;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    top: 56%;
+    left: 61.7%;
+    padding: 10px 17px;
+    outline: 0;
+    border-radius: 10px 10px;
+}
+
+.search_img h1{
+    position: absolute;
+    position: absolute;
+    top: 35%;
+    color: ghostwhite;
+    left: 45%;
+    font-family: sans-serif;
+}
+
+.list{
+    border-style: ridge;
+    margin-left: 34%;
+    padding: 1%;
+    width: 32%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    font-family: sans-serif;
+}
+
+.list p {
+    max-width: 80%;
+}
+.lyrics_btn{
+    float: right;
+    color: white;
+    cursor: pointer;
+    padding: 7px 9px;
+    background-color: #6A15D5;
+    border-radius: 5px 5px;
+    padding-bottom: -3%;
+    margin-top: -5.2%;
+}
+
+.next_btn{
+    margin-left: 50%;
+    background-color: #6A15D5;
+    border: none;
+    outline: 0;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 18px;
+    outline: 0;
+    border-radius: 3px 3px;
+    margin-bottom: 1%;
+}
+
+.lyrics_header{
+    margin-left: 35%;
+    width: 35%;
+    font-family: sans-serif;
+    margin-top: 1%
+}
+
+.lyrics_text{
+    margin-top: 5%;
+    font-size: larger;
+}
