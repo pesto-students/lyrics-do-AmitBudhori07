@@ -1,8 +1,9 @@
 /* eslint-disable */
 var pageList = new Array();
-var data = new Array()
+var data = new Array();
+var flag = true;
 var currentPage = 1;
-var numberPerPage = 10;
+var numberPerPage = 5;
 var numberOfPages = 0;
 window.onload = function(){
     const btn = document.getElementById('search-btn')
@@ -15,8 +16,8 @@ const getapi= async()=> {
     const search = `${url}/${document.getElementById('searchbox').value}`
     const response = await fetch(search); 
     data = await response.json(); 
-    console.log(data);
-    numberOfPages = Math.ceil(data.data.length / numberPerPage)
+    numberOfPages = Math.ceil(data.data.length / numberPerPage);
+    currentPage = 1;
     loadList(data.data);
 }
 
@@ -48,9 +49,10 @@ function loadList(list) {
     }
     const next = document.createElement('button');
     next.setAttribute('class','next_btn');
-    next.innerHTML = currentPage===numberOfPages ? 'Previous' : 'Next';
-    next.addEventListener('click',event=>{    
-        currentPage += currentPage===numberOfPages ? -1:1;
+    next.innerHTML = (flag && currentPage!==numberOfPages) || currentPage===1 ? "Next":"Previous"   
+    next.addEventListener('click',event=>{
+        if(flag || currentPage===1) flag = currentPage!==numberOfPages
+        currentPage += flag ? 1:-1;
         loadList(data.data);
     });
     div.appendChild(next);
@@ -58,7 +60,7 @@ function loadList(list) {
 
 async function lyricspage(artist,title){
     let div = document.getElementById("infos");
-    var li = document.createElement("div");
+    let li = document.createElement("div");
     let header = document.createElement('h1');
     let lyrics = document.createElement('div');
     li.setAttribute('class','lyrics_header');
