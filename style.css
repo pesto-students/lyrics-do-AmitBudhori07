@@ -8,32 +8,42 @@
     position: relative;
 }
 .search_img{
-  height: 50%;
-  width: 100%;
-  position: relative;
+    height: 50%;
+    width: 100%;
+    position: relative;
+    background-image: url(assets/hero-background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    place-content: center;
+    place-items: center;
 }
 .info{
-    height: auto;
-    width: 100%;
     font-family: sans-serif;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 img{
     height:100%;
     width: 100%;
 }
+.flex-dis{
+    margin: 40px 0 -117px 0;
+    position: relative;
+    width: 450px;
+    display: flex;
+}
 
 input[type=text]{
-    height: 12%;
-    width: 30%;
-    position: absolute;
-    top: 55%;
-    left:35%;
-    padding: 0 10px 0 29px;
+    width: 100%;
+    padding: 1em 1.5em;
     outline: none;
     border: 0ch !important;
     border-radius: 7px 7px 7px !important;
-    font-weight:bold;
+    font-weight: bold;
+    padding: 18px;
 }
 
 #search-btn{
@@ -44,48 +54,47 @@ input[type=text]{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-    top: 56%;
-    left: 61.7%;
-    padding: 10px 17px;
+    padding: 12px 17px;
+    right: 6px;
+    margin-top: 1%;
     outline: 0;
     border-radius: 10px 10px;
 }
 
 .search_img h1{
     position: absolute;
-    position: absolute;
-    top: 35%;
     color: ghostwhite;
-    left: 45%;
     font-family: sans-serif;
 }
 
 .list{
     border-style: ridge;
-    margin-left: 34%;
     padding: 1%;
-    width: 32%;
+    width: 459px;
     margin-bottom: 2%;
     margin-top: 1%;
+    display: flex;
     font-family: sans-serif;
+    position: relative;
 }
 
 .list p {
     max-width: 80%;
+    padding: 1%;
 }
 .lyrics_btn{
-    float: right;
+    position: absolute;
     color: white;
     cursor: pointer;
     padding: 7px 9px;
     background-color: #6A15D5;
     border-radius: 5px 5px;
     padding-bottom: -3%;
-    margin-top: -5.2%;
+    margin-top: -0.5%;
+    right: 4px;
 }
 
 .next_btn{
-    margin-left: 50%;
     background-color: #6A15D5;
     border: none;
     outline: 0;
@@ -100,7 +109,6 @@ input[type=text]{
 }
 
 .lyrics_header{
-    margin-left: 35%;
     width: 35%;
     font-family: sans-serif;
     margin-top: 1%

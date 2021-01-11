@@ -1,12 +1,14 @@
 /* eslint-disable */
-var pageList = new Array();
-var data = new Array();
-var flag = true;
-var currentPage = 1;
-var numberPerPage = 5;
-var numberOfPages = 0;
+let pageList = new Array();
+let data = new Array();
+let flag = true;
+let currentPage = 1;
+let numberPerPage = 5;
+let numberOfPages = 0;
+let div;
 window.onload = function(){
-    const btn = document.getElementById('search-btn')
+    const btn = document.getElementById('search-btn');
+    div = document.getElementById("infos")
     btn.addEventListener("click",throttle(getapi,1500))
 }
 
@@ -18,6 +20,7 @@ const getapi= async()=> {
     data = await response.json(); 
     numberOfPages = Math.ceil(data.data.length / numberPerPage);
     currentPage = 1;
+    console.log(data.data);
     loadList(data.data);
 }
 
@@ -26,7 +29,6 @@ function loadList(list) {
     var end = begin + numberPerPage;
 
     pageList = list.slice(begin, end);
-    var div = document.getElementById("infos");
     div.innerHTML = "";
     
     for (let r = 0; r < pageList.length; r++) {
